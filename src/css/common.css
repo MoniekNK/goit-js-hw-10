@@ -9,22 +9,22 @@ body {
   line-height: 2;
 }
 
-img {
-  display: block;
-  max-width: 30vw;
-  margin-top: 20vh;
-}
-
 .cat-info {
   display: flex;
 }
 
+img {
+  display: block;
+  max-width: 40vw;
+  margin-top: 20vh;
+}
+
 .description {
   display: flex;
+  width: 40vw;
   flex-direction: column;
-  width: 45vw;
-  margin-top: 20vh;
   margin-left: 5vw;
+  margin-top: 20vh;
 }
 .loader {
   color: #ffffff;

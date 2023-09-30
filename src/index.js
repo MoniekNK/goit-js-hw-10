@@ -1,8 +1,10 @@
 'use strict';
 
-console.log('Starting script');
-
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import axios from 'axios';
+axios.defaults.headers.common['x-api-key'] =
+  'live_1LAMYTSmu4VUyprbSx1yZrQQJLJOJVmLUcJYaYgAbOijQkthCvfSk2rKZrrjuDL5';
+
 import './css/common.css';
 import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select';
@@ -11,19 +13,8 @@ import 'slim-select/dist/slimselect.css';
 const selector = document.querySelector('.breed-select');
 const divCatInfo = document.querySelector('.cat-info');
 
-function showLoader() {
-  const loader = document.querySelector('.loader');
-  loader.style.display = 'block';
-}
-
-function hideLoader() {
-  const loader = document.querySelector('.loader');
-  loader.style.display = 'none';
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Window loaded');
-  Notiflix.Loading.standard('Loading data, please wait...');
 
   fetchBreeds()
     .then(breeds => {
