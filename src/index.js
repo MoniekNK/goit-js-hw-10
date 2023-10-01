@@ -40,7 +40,7 @@ selector.addEventListener('change', onSelectBreed);
 
 function onSelectBreed(event) {
   selector.disabled = true;
-  Notiflix.Loading.standard('Loading data, please wait...', {
+  Notiflix.Loading.dots('Loading data, please wait...', {
     overlay: selector,
   });
 
@@ -52,6 +52,7 @@ function onSelectBreed(event) {
       console.log('Fetched cat info', cat);
       Notiflix.Loading.remove(selector);
       console.log(cat);
+
       divCatInfo.innerHTML = `
         <img src="${cat.url}" alt="${cat.breeds[0].name}">
         <div class="description">

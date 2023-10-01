@@ -1,5 +1,5 @@
 'use strict';
-
+import Notiflix from 'notiflix';
 import axios from 'axios';
 
 axios.defaults.headers.common['x-api-key'] =
